@@ -1,0 +1,54 @@
+# Rider / IntelliJ
+.idea/
+.idea/.idea.*
+*.sln.DotSettings.user
+
+# Build artifacts
+bin/
+obj/
+out/
+publish/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Paket (jeśli używane)
+.paket/
+paket-files/
+
+# Visual Studio
+.vscode/
+*.vspscc
+*.vssscc
+
+# Test artifacts
+TestResults/
+*.TestResult.xml
+*.trx
+
+# ReSharper / Rider
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.tar.gz
+*.tar
+*.gz
