@@ -24,7 +24,7 @@ Wzorzec **Strategia** to behawioralny wzorzec, który:
 
 - Eliminacja rozrastającej się klasy, w której każda nowa funkcja zwiększa złożoność.
 - Oddzielenie logiki tras od kontekstu (kodu klasy głównej) – łatwiejsze utrzymanie i testowanie.
-- Umożliwia niezależny rozwój poszczególnych algorytmów bez potrzeby modyfikowania wspólnego kodu aplikacji.
+- Umożliwia niezależny rozwój poszczególnych algorytmów.
 - Możliwość łatwego dodania nowych strategii bez konieczności modyfikacji istniejącego kodu.
 
 ---
