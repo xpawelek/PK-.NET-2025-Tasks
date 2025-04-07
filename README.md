@@ -13,8 +13,8 @@ Wzorzec **Strategia** to behawioralny wzorzec, który:
 
 ### Jak wygląda implementacja?
 
-- Tworzysz interfejs strategii (np. "IRouteStrategy") z metodą "BuildRoute(Coordinates from, Coordinates to)".
-- Implementujesz różne strategie, np. WalkingStrategy, CarStrategy, PublicTransportStrategy.
+- Tworzymy przykładowo interfejs strategii (np. "IRouteStrategy") z metodą "BuildRoute(Coordinates from, Coordinates to)".
+- Implementujemy różne strategie, np. WalkingStrategy, CarStrategy, PublicTransportStrategy.
 - Klasa Navigator deleguje wykonanie do strategii przez interfejs.
 - Klient może w każdej chwili zmienić strategię – bez modyfikacji "Navigator".
 
