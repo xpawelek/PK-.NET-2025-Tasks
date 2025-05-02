@@ -1,0 +1,35 @@
+# Build folders
+bin/
+obj/
+
+# Rider settings
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# ASP.NET Core secrets
+secrets.json
+
+# EF Core Migrations snapshot
+MigrationsSnapshot.cs
+
+# SQLite database file
+*.db
+
+# dotnet publish
+publish/
+
+# Optional: ignore launchSettings
+Properties/launchSettings.json
