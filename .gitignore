@@ -1,0 +1,58 @@
+# Build results
+bin/
+obj/
+[Ll]og/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# ASP.NET Core
+wwwroot/*.db
+appsettings.*.json
+secrets.json
+
+# EF Core
+Migrations/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Logs
+*.log
+
+# Tests
+TestResults/
+*.coverage
+*.coveragexml
+
+# Others
+*.bak
+*.tmp
+*.swp
+*.orig
+
+# JetBrains Rider
+.idea/
+*.dotCover
+
+# Visual Studio
+.vs/

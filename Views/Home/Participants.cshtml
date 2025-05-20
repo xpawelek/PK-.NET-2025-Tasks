@@ -1,0 +1,73 @@
+﻿@model EventsRegisterer.Models.Participant
+@{
+    ViewData["Title"] = "Manage participants";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <button onclick="showForm()">Add new participant</button>
+    <button onclick="showList()">Show paricipants assigned to chosen event</button>
+</div>
+
+<div id="formDiv">
+    <form asp-controller="Participant" asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="Name">Name: </label>
+            <input asp-for="Name" class="form-control"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Email: </label>
+            <input asp-for="Email" class="form-control"/>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EventId">EventId: </label>
+            <input asp-for="EventId" class="form-control"/>
+        </div>
+        <button type="submit">Add new participant!</button>
+    </form>
+</div>
+
+<div id="listDiv">
+    <form asp-controller="Participant" asp-action="EventParticipants" method="get" style="display:inline;">
+        <input type="number" name="id" />
+        <button type="submit">Show participants</button>
+    </form>
+    
+    @if (ViewBag.SelectedEventId != null)
+    {
+        <p>Participants of event with id : @ViewBag.SelectedEventId</p>
+        <ul>
+            @foreach (var p in ViewBag.Participants as List<Participant>)
+            {
+                <li>@p.Name</li>
+            }
+        </ul>
+    }
+</div>
+
+
+
+<script>
+    let formBlock = document.getElementById("formDiv");
+    let listBlock = document.getElementById("listDiv");
+    let details = document.getElementById("listDiv");
+
+    formBlock.style.display = "none";
+    listBlock.style.display = "none";
+
+    function showForm()
+    {
+        formBlock.style.display = "block";
+        listBlock.style.display = "none";
+    }
+
+    function showList()
+    {
+        formBlock.style.display = "none";
+        listBlock.style.display = "block";
+    }
+
+
+</script>

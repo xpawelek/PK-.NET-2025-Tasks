@@ -1,0 +1,83 @@
+﻿@model EventsRegisterer.Models.Event
+@{
+    ViewData["Title"] = "Manage events";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <button onclick="showForm()">Add new event</button>
+    <button onclick="showList()">List all events</button>
+</div>
+
+<div id="formDiv">
+    <form asp-controller="Events" asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="Title">Title: </label>
+            <input name="Title" asp-for="Title" class="form-control"/>
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Date">Date: </label>
+            <input name="Date" asp-for="Date" class="form-control"/>
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description*: </label>
+            <input name="Description" asp-for="Description" class="form-control"/>
+        </div>
+        <button type="submit">Add new event!</button>
+    </form>
+</div>
+<div id="listDiv">
+    
+    @{
+        var selectedId = ViewBag.SelectedId as int?;
+        var events = ViewBag.Events as List<Event>;
+    }
+    
+    <h4>Events</h4>
+    @if (ViewBag.Events != null)
+    {
+        <ul>
+            @foreach (var ev in events)
+            {
+                <li>@ev.Title — @ev.Date.ToShortDateString()</li>
+                <form asp-controller="Events" asp-action="Details" method="get" style="display:inline;">
+                    <input type="hidden" name="id" value="@ev.Id" />
+                    <button type="submit">Show details</button>
+                </form>
+
+                @if (selectedId == ev.Id)
+                {
+                    <div class="mt-2 ms-3">
+                        <p><strong>Description:</strong> @ev.Description</p>
+                    </div>
+                }
+            }
+        </ul>
+    }
+</div>
+
+
+<script>
+    let formBlock = document.getElementById("formDiv");
+    let listBlock = document.getElementById("listDiv");
+    let details = document.getElementById("listDiv");
+    
+    formBlock.style.display = "none";
+    listBlock.style.display = "none";
+    
+    function showForm()
+    {
+        formBlock.style.display = "block";
+        listBlock.style.display = "none";
+    }
+
+    function showList()
+    {
+        formBlock.style.display = "none";
+        listBlock.style.display = "block";
+    }
+
+
+</script>
