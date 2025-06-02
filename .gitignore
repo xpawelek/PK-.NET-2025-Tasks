@@ -1,0 +1,89 @@
+## .NET
+bin/
+obj/
+out/
+[Ll]og/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Rider
+.idea/
+*.sln.iml
+
+## Visual Studio Code
+.vscode/
+
+## Dotnet CLI
+.project/
+.global.json
+
+## Others
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+*.orig
+
+# Ignore local database files
+*.mdf
+*.ldf
+
+# Rider working directory history
+.idea/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Backup & temp files
+*~
+*.bak
+*.tmp
+*.swp
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+*.snupkg
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+build/
+bld/
+[Bb]uild[Ll]og.*
+
+# DotCover
+.idea/.dotCover
+
+# Test results
+TestResults/
+*.VisualState.xml
+*.TestResult.xml
+*.coverage
+*.coveragexml
+
+# Publish
+publish/
+*.publishsettings
+
+# Azure
+*.azurepubxml
+*.P*
